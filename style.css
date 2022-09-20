@@ -1,0 +1,50 @@
+
+:root{
+    --back:#131722;
+
+    --text:#FFFFFF;
+    --labelInput:#FFFFFF;
+
+    --backInput:rgba(103, 58, 183, 0.3);
+    --borderValidBtn:#8BC34A;
+    --borderInvalidBtn:#B92326;
+    --borderTextBtn:#FF9800;
+
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body{
+    background-color: var(--back);
+}
+
+label{
+    color: var(--text);
+}
+
+input{
+    border-style: none;
+    background-color: var(--backInput);
+}
+
+input[type=text],
+input[type=password]{
+    width: 170px;
+    height: 50px;
+}
+input[type=email],
+input[type=tel]{
+    width: 350px;
+    height: 50px;
+}
+
+button[type=submit]{
+    background-color: transparent;
+    border-style: solid;
+    border-color: var(--borderTextBtn);
+    width: 200px;
+    height: 40px;
+}
