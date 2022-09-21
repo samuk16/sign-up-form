@@ -9,25 +9,81 @@
     --borderValidBtn:#8BC34A;
     --borderInvalidBtn:#B92326;
     --borderTextBtn:#FF9800;
+    --backBtn:rgba(255, 152, 0, 0.3);
 
 }
+
 *{
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Roboto Mono', monospace;
 }
 
 body{
     background-color: var(--back);
+    display: flex;
 }
+
+
+.containerForm{
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 45px;
+
+    
+    
+    
+}
+
+.textR{
+    width: 70%;
+    color: gray;
+    text-align: center;
+}
+
+.shadow{
+    position: relative;
+    width: 10px;
+    box-shadow: 30px 4px 60px 85px #131722;
+}
+.containerImg{
+    width: 50vw;
+    height: 100vh;
+    background:no-repeat center/100% url(backImg.png);
+    background-size:cover;
+    
+    
+}
+
+.formCont{
+    display: flex;
+    flex-direction: column;
+    gap: 30px ;
+}
+
+.containerFullName,
+.containerPassword,
+.containerContact{
+    display: flex;
+    gap: 10px;
+    
+}
+
 
 label{
     color: var(--text);
+    display: none;
 }
 
 input{
     border-style: none;
     background-color: var(--backInput);
+    padding: 0 0 0 10px;
+    color: var(--text);
 }
 
 input[type=text],
@@ -35,10 +91,20 @@ input[type=password]{
     width: 170px;
     height: 50px;
 }
-input[type=email],
-input[type=tel]{
-    width: 350px;
+input[type=email]{
+    width: 210px;
     height: 50px;
+    
+}
+
+.containerBtn{
+    margin: auto;
+}
+
+input[type=tel]{
+    width: 130px;
+    height: 50px;
+    
 }
 
 button[type=submit]{
@@ -47,4 +113,16 @@ button[type=submit]{
     border-color: var(--borderTextBtn);
     width: 200px;
     height: 40px;
+    color: var(--borderTextBtn);
 }
+
+button[type=submit]:hover{
+    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .6s;
+    background-color:var(--backBtn) ;
+}
+
+input,button[type=submit]{
+    border-radius: 10px;
+}
+
+
