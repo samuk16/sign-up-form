@@ -5,6 +5,9 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
     <title>sign Up Form</title>
 </head>
 <body>
@@ -17,50 +20,61 @@
             </svg>
         </div>
             
-        <form action="">
+        <form action="" class="formCont">
 
-            <div>
-                <label for="">Name
-                    <input type="text" name="name" >
-                
-                </label>
-                <label for="">Surname
-                    <input type="text" name="surname" >
-                </label>
+            <div class="containerFullName">
+
+                <label for="name">Name</label>
+                <input type="text" placeholder="Name" name="name" id="name" >
+
+
+                <label for="surname">Surname</label>
+                <input type="text" placeholder="Surname" name="surname" id="surname" >
+
             </div>
         
-            <div>
-                <label for="">Email
-                    <input type="email" name="email" >
-                </label>
+            <div class="containerContact">
+
+                <label for="email">Email</label>
+                <input type="email" placeholder="Email" name="email" id="email" >
+
+                <label for="phone">Phone</label>
+                <input type="tel" placeholder="Phone Number" name="phone"  id="phone">
+
             </div>
 
-            <div>
-                <label for="">Phone
-                    <input type="tel" name="phone" >
-                </label>
+            
+
+                
+
+            
+
+            <div class="containerPassword">
+
+                <label for="pass">Password</label>
+                <input type="password" placeholder="Password" name="pass" id="pass">
+
+                <label for="confirm">Confirm Password</label>
+                <input type="password" placeholder="Confirm Password" name="confirmpass" id="confirm">
+
             </div>
 
-            <div>
-                <label for="">Password
-                    <input type="password" name="pass" >
-                </label>
-
-                <label for="">Confirm Password
-                    <input type="password" name="confirmpass" >
-                </label>
-            </div>
-
-            <div>
+            <div class="containerBtn">
                 <button type="submit">Create Account</button>
             </div>
         </form>
+        <div class="textR">
+            <p>
+                This is not a real inline service! You know you need something like this in your life to help you realize your deepest dreams.
+                Sign up now to get started.
+                You know you want to.
+                Let's do this!
+            </p>
+        </div>
 
     </div>
 
-
-    <div class="containerImg">
-        <img src="/1267554_waifu2x_2x_3n_jpg.png" alt="background trading" width="981" height="1080">
-    </div>
+    <div class="shadow"></div>
+    <div class="containerImg"></div>
 </body>
 </html>
