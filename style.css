@@ -8,8 +8,8 @@
     --backInput:rgba(103, 58, 183, 0.3);
     --borderValidBtn:#8BC34A;
     --borderInvalidBtn:#B92326;
-    --borderTextBtn:#FF9800;
-    --backBtn:rgba(255, 152, 0, 0.3);
+    --borderTextBtn:#673AB7;
+    --backBtn:rgba(103, 58, 183, 0.2);
 
 }
 
@@ -21,21 +21,27 @@
 }
 
 body{
-    background-color: var(--back);
-    display: flex;
+    background: url(/backImgP.png);
+    width: 100vw;
+    height: 100vh;
+
 }
 
+.btc{
+    
+    fill: hsla(36, 100%, 50%, 0.603);
+    
+}
 
 .containerForm{
     width: 50vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     gap: 45px;
 
-    
-    
     
 }
 
@@ -45,19 +51,7 @@ body{
     text-align: center;
 }
 
-.shadow{
-    position: relative;
-    width: 10px;
-    box-shadow: 30px 4px 60px 85px #131722;
-}
-.containerImg{
-    width: 50vw;
-    height: 100vh;
-    background:no-repeat center/100% url(backImg.png);
-    background-size:cover;
-    
-    
-}
+
 
 .formCont{
     display: flex;
@@ -79,7 +73,7 @@ label{
     display: none;
 }
 
-input{
+input[required],.confirmPass{
     border-style: none;
     background-color: var(--backInput);
     padding: 0 0 0 10px;
@@ -117,12 +111,69 @@ button[type=submit]{
 }
 
 button[type=submit]:hover{
-    transition: all cubic-bezier(0.165, 0.84, 0.44, 1) .6s;
+    
     background-color:var(--backBtn) ;
 }
 
 input,button[type=submit]{
     border-radius: 10px;
+    transition: all .3s ease-in-out;
+    /* animation: silo-fade 0.5s; */
 }
 
+input[required]:focus:valid{
+
+    outline: 2px solid var(--borderValidBtn);
+}
+
+input[required]:focus:invalid{
+    outline: 2px solid gray;
+    /* border: 2px solid gray; */
+    /* transition: all .5s ease-in-out; */
+    /* animation: silo-fade 0.5s; */
+
+}
+
+input[required]:invalid{
+    outline: 2px solid var(--borderInvalidBtn);
+
+}
+
+input[required]:valid{
+    outline: 2px solid var(--borderValidBtn);
+
+}
+
+input[required]:placeholder-shown{
+    outline: 2px solid transparent ;
+}
+:focus{
+    outline: 1px solid transparent;
+    /* outline-offset: 5px; */
+}
+
+
+.confirmPass{
+    outline: 2px solid transparent;
+}
+
+/* .confirmPass:focus{
+    outline: 2px solid gray;
+} */
+
+.equalPass{
+    outline: 2px solid var(--borderValidBtn);
+}
+
+.diffPass{
+    outline: 2px solid var(--borderInvalidBtn);
+}
+
+.diffPass:focus{
+    outline: 2px solid gray;
+}
+
+/* #pass{
+    outline: 2px solid var(--borderValidBtn);
+} */
 
