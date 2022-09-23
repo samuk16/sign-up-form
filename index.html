@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="/script.js" defer></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
@@ -15,47 +16,44 @@
     <div class="containerForm">
 
         <div class="svgBtc">
-            <svg width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M40 3.2C19.6949 3.2 3.20001 19.6949 3.20001 40C3.20001 60.3051 19.6949 76.8 40 76.8C60.3051 76.8 76.8 60.3051 76.8 40C76.8 19.6949 60.3051 3.2 40 3.2ZM40 6.4C58.5757 6.4 73.6 21.4243 73.6 40C73.6 58.5757 58.5757 73.6 40 73.6C21.4243 73.6 6.40001 58.5757 6.40001 40C6.40001 21.4243 21.4243 6.4 40 6.4ZM33.6 16V20.8H25.6V59.2H33.6V64H36.8V59.2H40V64H43.2V59.1844C46.8772 59.0803 55.6813 58.0497 55.6813 48.3187C55.6813 41.5987 49.9188 39.3606 47.5188 39.0406V38.8812C48.6388 38.5612 54.2406 36.8006 54.2406 30.2406C54.2406 22.0574 46.4901 20.9783 43.2 20.8344V16H40V20.8H36.8V16H33.6ZM29.2813 23.8406H41.9188C47.6788 23.8406 50.5594 26.2406 50.5594 31.0406C50.5594 32.0006 50.4013 32.8 50.0813 33.6C49.7613 34.4 49.1213 35.0412 48.4813 35.6812C47.6813 36.3212 46.8794 36.7987 45.7594 37.1187C44.6394 37.4387 43.3588 37.6 41.9188 37.6H29.2813V23.8406ZM29.2813 40.8H41.9188C45.1188 40.8 47.6806 41.4387 49.4406 42.7187C51.2006 43.9987 52 45.9187 52 48.3187C52 49.9187 51.68 51.1994 51.2 52.1594C50.56 53.1194 49.9194 53.9194 48.9594 54.5594C47.9994 55.1994 47.0394 55.6806 45.7594 55.8406C44.6394 56.0006 43.3588 56.1594 41.9188 56.1594H29.2813V40.8Z" fill="#673AB7"/>
+            <svg  width="80" height="80" viewBox="0 0 80 80" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path class="btc" d="M40 3.2C19.6949 3.2 3.20001 19.6949 3.20001 40C3.20001 60.3051 19.6949 76.8 40 76.8C60.3051 76.8 76.8 60.3051 76.8 40C76.8 19.6949 60.3051 3.2 40 3.2ZM40 6.4C58.5757 6.4 73.6 21.4243 73.6 40C73.6 58.5757 58.5757 73.6 40 73.6C21.4243 73.6 6.40001 58.5757 6.40001 40C6.40001 21.4243 21.4243 6.4 40 6.4ZM33.6 16V20.8H25.6V59.2H33.6V64H36.8V59.2H40V64H43.2V59.1844C46.8772 59.0803 55.6813 58.0497 55.6813 48.3187C55.6813 41.5987 49.9188 39.3606 47.5188 39.0406V38.8812C48.6388 38.5612 54.2406 36.8006 54.2406 30.2406C54.2406 22.0574 46.4901 20.9783 43.2 20.8344V16H40V20.8H36.8V16H33.6ZM29.2813 23.8406H41.9188C47.6788 23.8406 50.5594 26.2406 50.5594 31.0406C50.5594 32.0006 50.4013 32.8 50.0813 33.6C49.7613 34.4 49.1213 35.0412 48.4813 35.6812C47.6813 36.3212 46.8794 36.7987 45.7594 37.1187C44.6394 37.4387 43.3588 37.6 41.9188 37.6H29.2813V23.8406ZM29.2813 40.8H41.9188C45.1188 40.8 47.6806 41.4387 49.4406 42.7187C51.2006 43.9987 52 45.9187 52 48.3187C52 49.9187 51.68 51.1994 51.2 52.1594C50.56 53.1194 49.9194 53.9194 48.9594 54.5594C47.9994 55.1994 47.0394 55.6806 45.7594 55.8406C44.6394 56.0006 43.3588 56.1594 41.9188 56.1594H29.2813V40.8Z" fill="#FF9800"/>
             </svg>
+                
         </div>
             
-        <form action="" class="formCont">
+        <form action="" class="formCont" id="form">
 
             <div class="containerFullName">
 
                 <label for="name">Name</label>
-                <input type="text" placeholder="Name" name="name" id="name" >
+                <input autocomplete="off" type="text" placeholder="Name" name="name" id="name" value="" required pattern="^[^0-9]+$" >
 
 
                 <label for="surname">Surname</label>
-                <input type="text" placeholder="Surname" name="surname" id="surname" >
+                <input type="text" placeholder="Surname" name="surname" id="surname"  required pattern="^[^0-9]+$">
 
             </div>
         
             <div class="containerContact">
 
                 <label for="email">Email</label>
-                <input type="email" placeholder="Email" name="email" id="email" >
+                <input type="email" placeholder="Email" name="email" id="email" required >
 
                 <label for="phone">Phone</label>
-                <input type="tel" placeholder="Phone Number" name="phone"  id="phone">
+                <input type="tel" placeholder="Phone Number" name="phone"  id="phone" required minlength="10" pattern="^\d*[0-9]$" >
 
             </div>
 
-            
-
-                
-
-            
+      
 
             <div class="containerPassword">
 
                 <label for="pass">Password</label>
-                <input type="password" placeholder="Password" name="pass" id="pass">
+                <input type="password" placeholder="Password"  name="pass" id="pass" minlength="8" required>
 
                 <label for="confirm">Confirm Password</label>
-                <input type="password" placeholder="Confirm Password" name="confirmpass" id="confirm">
+                <input type="password" placeholder="Confirm Password" minlength="8" name="confirmpass" id="confirm" class="confirmPass">
 
             </div>
 
@@ -63,6 +61,7 @@
                 <button type="submit">Create Account</button>
             </div>
         </form>
+        
         <div class="textR">
             <p>
                 This is not a real inline service! You know you need something like this in your life to help you realize your deepest dreams.
@@ -74,7 +73,6 @@
 
     </div>
 
-    <div class="shadow"></div>
-    <div class="containerImg"></div>
+    
 </body>
 </html>
