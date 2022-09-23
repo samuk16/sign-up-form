@@ -21,7 +21,7 @@
 }
 
 body{
-    background: url(/backImgP.png);
+    background: url(./backImgP.png);
     width: 100vw;
     height: 100vh;
 
@@ -111,26 +111,21 @@ button[type=submit]{
 }
 
 button[type=submit]:hover{
-    
     background-color:var(--backBtn) ;
 }
 
 input,button[type=submit]{
     border-radius: 10px;
     transition: all .3s ease-in-out;
-    /* animation: silo-fade 0.5s; */
+ 
 }
 
 input[required]:focus:valid{
-
     outline: 2px solid var(--borderValidBtn);
 }
 
 input[required]:focus:invalid{
     outline: 2px solid gray;
-    /* border: 2px solid gray; */
-    /* transition: all .5s ease-in-out; */
-    /* animation: silo-fade 0.5s; */
 
 }
 
@@ -149,17 +144,12 @@ input[required]:placeholder-shown{
 }
 :focus{
     outline: 1px solid transparent;
-    /* outline-offset: 5px; */
+    
 }
-
 
 .confirmPass{
     outline: 2px solid transparent;
 }
-
-/* .confirmPass:focus{
-    outline: 2px solid gray;
-} */
 
 .equalPass{
     outline: 2px solid var(--borderValidBtn);
@@ -173,7 +163,5 @@ input[required]:placeholder-shown{
     outline: 2px solid gray;
 }
 
-/* #pass{
-    outline: 2px solid var(--borderValidBtn);
-} */
+
 
